@@ -44,12 +44,20 @@ const setCharacter = (
                     const matName = mat.name.toLowerCase();
 
                     if (
-                      name.includes("body") || name.includes("head") || name.includes("face") ||
-                      name.includes("hand") || name.includes("skin") || name.includes("arm") ||
-                      matName.includes("body") || matName.includes("head") || matName.includes("face") ||
-                      matName.includes("hand") || matName.includes("skin") || matName.includes("arm")
+                      name.includes("face") || name.includes("head") ||
+                      name.includes("hand") || name.includes("skin") ||
+                      matName.includes("face") || matName.includes("head") ||
+                      matName.includes("hand") || matName.includes("skin")
                     ) {
-                      mat.color.setHex(0xe0ac69);
+                      // Face & hands — natural skin tone
+                      mat.color.setHex(0xffdbac);
+                    }
+                    else if (
+                      name.includes("body") || name.includes("arm") ||
+                      matName.includes("body") || matName.includes("arm")
+                    ) {
+                      // Body / torso — light purple
+                      mat.color.setHex(0xc9b1ff);
                     }
                     else if (
                       name.includes("shirt") || name.includes("tshirt") || name.includes("top") || name.includes("cloth") ||
@@ -61,7 +69,8 @@ const setCharacter = (
                       name.includes("jean") || name.includes("pant") || name.includes("bottom") || name.includes("leg") ||
                       matName.includes("jean") || matName.includes("pant") || matName.includes("bottom") || matName.includes("leg")
                     ) {
-                      mat.color.setHex(0x444444);
+                      // Legs — black
+                      mat.color.setHex(0x000000);
                     }
                   }
                 }
