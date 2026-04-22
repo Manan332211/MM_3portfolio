@@ -43,7 +43,7 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          MM
+          <img src="/images/m-logo.svg" alt="" />
         </a>
         <a
           href="mailto:mananmakwana8600@gmail.com"
